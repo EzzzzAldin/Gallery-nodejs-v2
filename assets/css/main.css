@@ -1,0 +1,183 @@
+body {
+    background-color: #000;
+}
+
+@font-face {
+    font-family: Rubikimport;
+    src: url(Rubik-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: JosefinSansimport;
+    src: url(JosefinSans-VariableFont_wght.ttf);
+}
+
+.navbar .navbar-brand {
+    color: #fff;
+    font-family: Rubikimport;
+    font-size: 2.5rem;
+    font-weight: bolder;
+}
+
+.navbar-nav {
+    float:none;
+    margin:0 auto;
+    display: block;
+    text-align: center;
+}
+
+.navbar-nav > li {
+    display: inline-block;
+    float:none;
+    font-size: 1.6rem;
+    font-family: JosefinSansimport;
+}
+
+.navbar-dark .navbar-nav .active>.nav-link {
+    color: #70c87f;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #70c87f;
+}
+
+.bg-dark {
+    background-color: #000!important;
+}
+
+.navbar-dark .nav-item .nav-link {
+    color: #fff;
+}
+
+.on {
+    text-align: center;
+}
+
+.text-center h3 {
+    font-size: 2.5rem;
+    color: #fff;
+    font-family: JosefinSansimport;
+    font-weight: bolder;
+}
+
+.pic a {
+    text-decoration: none;
+}
+
+.pic a h3 {
+    font-size: 2rem;
+    color: #fff;
+    font-family: JosefinSansimport;
+    font-weight: bolder;
+}
+
+h1 {
+    color: #70c87f;
+    font-family: JosefinSansimport;
+    font-weight: bolder;
+}
+
+#log {
+    color: #fff
+}
+
+.box {
+    transition: transform .2s;
+}
+
+.box:hover {
+    transform: scale(1.1);
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.hd h3 {
+    color: #fff;
+    font-family: JosefinSansimport;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.br {
+    background-color: #8a2b8a;
+    color: #fff;
+    border: 0px;
+}
+
+.br:hover {
+    background-color: #db3bdb;
+    color: #fff;
+}
+
+.border-dark {
+    background-color: #8a2b8a;
+}
+
+.card-body .btn-secondary:hover {
+    color: #70c87f;
+}
+
+.showcom a {
+    text-decoration: none;
+    font-size: 2rem;
+    color: #fff;
+    font-family: JosefinSansimport;
+    font-weight: bolder;
+}
+.commentBody {
+    color: #70c87f;
+    font-family: JosefinSansimport;
+    font-weight: bolder;
+    font-size: 2rem;
+    margin-left: 5rem;
+}
+
+.hidden {
+    visibility: hidden;
+} 
+
+.comments label {
+    color: #fff;
+    font-family: JosefinSansimport;
+    font-weight: bolder;
+    font-size: larger;
+}
+
+.btn-pic:hover {
+    color: #70c87f;
+}
+
+#likeCount {
+    color: #70c87f;
+    font-family: JosefinSansimport;
+    font-weight: bolder;
+    font-size: larger;
+    margin-left: 1rem;
+}
+
+#like-container h4 {
+    color: #70c87f;
+    font-family: JosefinSansimport;
+    font-weight: bolder;
+    font-size: larger;
+    margin-left: 0.5rem;
+    margin-top: 0.2rem;
+}
+
+.btnColor {
+    color: #f81010;
+}
+
+.commentL {
+    color: #70c87f;
+    font-family: JosefinSansimport;
+    font-weight: bolder;
+    font-size: larger;
+    margin-left: 0.5rem;
+    margin-top: 0.2rem;
+}
+

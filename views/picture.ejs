@@ -1,0 +1,77 @@
+<%- include('parts/header')%>
+<%- include('parts/navbar')%>
+
+<div class="container">
+    <div class="row ml-3 mt-3">
+        <div class="row pic">
+            <img class="mx-auto d-block rounded-circle border border-dark m-2" src='/<%= pictures.user.image%>' style="height: 50px; width: 50px;">   
+            <a href="/profile/<%= pictures.user._id%>"">
+                <h3 class="m-2"><%= pictures.user.username%></h3>
+            </a>
+        </div>
+    </div>
+            <div class="row">
+                <figure class="col-12 mt-1" style="width: 27rem;">
+                    <img class="mx-auto d-block" src="/<%= pictures.picture%>" style="height: 100%;width: 100%;border-radius: 1rem;">
+                </figure>
+            </div>
+            <h1><%= pictures.name%></h1>
+            <div class="card-body">
+                <% if (likeUser) { %>
+                <button type="button" class="btn btn-secondary btn-lg btn-pic btnColor" id="btnLike"><i class="fas fa-heart" id="haert"></i></button>
+                <% } else { %>
+                <button type="button" class="btn btn-secondary btn-lg btn-pic" id="btnLike"><i class="fas fa-heart" id="haert"></i></button>
+                <% } %>
+                <input type="hidden" id="picId" value="<%= picId %>">
+                <input type="hidden" id="userId" value="<%= isUser %>">
+                <button type="button" class="btn btn-secondary btn-lg btn-pic" id="btn-comment">Comment <i class="fas fa-comments"></i></button>
+             </div>
+             <div class="container" id="like-container">
+                 <div class="row">
+                     <span id="likeCount"><%= pictures.like%></span>
+                     <h4>like</h4>
+                 </div>
+            </div>
+            <h4 class="commentL"><%= comments.length%> comments</h4>
+            </div>
+            <div id="comments-container">
+                <% for(let comment of comments) { %>
+                <div class="container comments">
+                    <div class="row ml-3 mt-3 showcom">
+                        <img class="d-block rounded-circle border border-dark" src='/<%= comment.user.image%>' style="height: 50px; width: 50px;">
+                        <a href="/profile/<%= comment.user._id%>">
+                            <h3 class="m-2"><%= comment.user.username %></h3>
+                        </a>
+                    </div>
+                    <div class="container">
+                            <h4 class="commentBody">
+                                <%= comment.commentBody %>
+                            </h4>
+                    </div>
+                </div>
+                <% } %>
+            </div>
+                <div class="container hidden comments">
+                    <input type="hidden" id="username" value="<%= user.username %>">
+                    <input type="hidden" id="userimage" value="<%= user.image%>">
+                    <input type="hidden" id="usercommentId" value="<%= isUser %>">
+                    <div class="form-group">
+                      <label for="Body">Comment</label>
+                      <textarea class="form-control" id="commentBody" rows="5" placeholder="comment body"></textarea>
+                    </div>
+                    <div class="form-group">
+                            <button type="submit" class="btn btn-dark rounded-pill btn-pic" id="btn-create-comment"> 
+                                Create Comment
+                            </button>
+                        </div>
+                </div>
+
+    
+</div>
+<%- include('parts/scripts')%>
+<script src="/socket.io/socket.io.js"></script>
+<script src='/js/sockets/like.js'></script>
+<script src='/js/sockets/comment.js'></script>
+
+</body>
+</html>
